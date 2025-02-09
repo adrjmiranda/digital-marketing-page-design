@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/adrjmiranda/digital-marketing-page-design#readme",
   "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/webpack": "^5.28.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
   }
