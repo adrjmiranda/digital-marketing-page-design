@@ -1,29 +1,30 @@
 {
-  "name": "digital-marketing-page-design",
-  "version": "1.0.0",
-  "description": "This repository contains the layout of a website page for a **digital marketing**. The design is created using HTML, CSS, and JavaScript. The objective of this project is to develop a visually attractive and functional page, representing the services and identity of a **digital marketing**.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adrjmiranda/digital-marketing-page-design.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/adrjmiranda/digital-marketing-page-design/issues"
-  },
-  "homepage": "https://github.com/adrjmiranda/digital-marketing-page-design#readme",
-  "devDependencies": {
-    "@types/node": "^22.13.1",
-    "@types/webpack": "^5.28.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.3",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
-  }
+	"name": "digital-marketing-page-design",
+	"version": "1.0.0",
+	"description": "This repository contains the layout of a website page for a **digital marketing**. The design is created using HTML, CSS, and JavaScript. The objective of this project is to develop a visually attractive and functional page, representing the services and identity of a **digital marketing**.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adrjmiranda/digital-marketing-page-design.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/adrjmiranda/digital-marketing-page-design/issues"
+	},
+	"homepage": "https://github.com/adrjmiranda/digital-marketing-page-design#readme",
+	"devDependencies": {
+		"@types/node": "^22.13.1",
+		"@types/webpack": "^5.28.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^6.0.1"
+	}
 }
