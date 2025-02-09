@@ -1,7 +1,7 @@
 {
 	"name": "digital-marketing-page-design",
 	"version": "1.0.0",
-	"description": "This repository contains the layout of a website page for a **digital marketing**. The design is created using HTML, CSS, and JavaScript. The objective of this project is to develop a visually attractive and functional page, representing the services and identity of a **digital marketing**.",
+	"description": "This repository contains the layout of a website page for a digital marketing. The design is created using HTML, CSS, and JavaScript. The objective of this project is to develop a visually attractive and functional page, representing the services and identity of a digital marketing.",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
