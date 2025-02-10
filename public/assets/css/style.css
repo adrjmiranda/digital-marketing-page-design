@@ -59,7 +59,7 @@
 	);
 
 	/* Width */
-	--container-max-width: 1024px;
+	--container-max-width: 1240px;
 }
 
 /***************** General *******************/
@@ -122,6 +122,7 @@ select {
 .container {
 	max-width: var(--container-max-width);
 	padding-inline: var(--container-pi);
+	margin: 0 auto;
 }
 
 .section-container {
