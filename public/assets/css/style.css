@@ -248,11 +248,12 @@ select {
 	color: var(--alt-color);
 	font-weight: var(--bold-font);
 	font-size: var(--lg-fs);
-	text-transform: uppercase;
+	text-transform: capitalize;
 	background-color: var(--white-color-10);
 	border-radius: var(--light-radius);
 	padding: 0.75rem 1.25rem;
 	opacity: 0.75;
+	font-family: var(--main-font-family);
 }
 
 .banner-dots {
