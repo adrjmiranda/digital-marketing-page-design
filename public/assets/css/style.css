@@ -69,16 +69,27 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
 	scroll-behavior: smooth;
+}
+
+body {
 	color: var(--black-color-00);
 	font-family: var(--text-font-family);
+	font-size: var(--base-fs);
 	background-color: var(--white-color-10);
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+a,
+button {
+	font-weight: var(--medium-font);
+	transition: var(--link-tr);
 }
 
 ul {
@@ -141,10 +152,31 @@ select {
 	align-items: center;
 }
 
+.logo img {
+	height: 42px;
+}
+
 /***************** HOME *******************/
 /* TODO: Create HOME style */
 /***************** NAVBAR *******************/
-/* TODO: Create NAVBAR style */
+.navbar-content,
+.navbar-menu {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-content {
+	justify-content: space-between;
+	height: 80px;
+}
+
+.navbar-menu {
+	gap: 1.75rem;
+}
+
+.navbar-link:hover {
+	color: var(--alt-color);
+}
 /************** End of NAVBAR ***************/
 
 /***************** BANNER *******************/
