@@ -537,6 +537,12 @@ select {
 	filter: var(--purple-ds);
 	box-shadow: var(--purple-bs);
 	background-color: var(--white-color-00);
+	cursor: pointer;
+	transition: transform 0.25s ease-in-out;
+}
+
+.plans-item:hover {
+	transform: translateY(-0.15rem) scale(1.05);
 }
 
 .plans-header {
