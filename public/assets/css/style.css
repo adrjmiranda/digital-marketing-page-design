@@ -230,6 +230,10 @@ select {
 	background-color: var(--alt-color);
 }
 
+.hidden {
+	display: none;
+}
+
 /***************** HOME *******************/
 /***************** NAVBAR *******************/
 #navbar {
@@ -247,8 +251,21 @@ select {
 	height: 80px;
 }
 
+/***************** TOGGLE MENU *******************/
+#toggle-menu {
+	display: none;
+}
+
+#toggle-menu i {
+	font-size: var(--xl-fs);
+	pointer-events: none;
+}
+
 .navbar-menu {
 	gap: 1.75rem;
+}
+.navbar-menu.show {
+	display: flex;
 }
 
 .navbar-link:hover {
@@ -901,6 +918,51 @@ select {
 }
 
 @media screen and (max-width: 740px) {
+	/***************** NAVBAR *******************/
+	.navbar-content {
+		position: relative;
+		z-index: 90;
+	}
+
+	.navbar-menu {
+		flex-direction: column;
+		background-color: var(--white-color-00);
+		position: absolute;
+		bottom: -383px;
+		right: -50%;
+		padding-block: 1.75rem;
+		transform: translate(-50%, -50%);
+		z-index: 999;
+		width: 100vw;
+		gap: 0.35rem;
+		height: max-content;
+		display: none;
+	}
+
+	.navbar-item {
+		width: 90%;
+	}
+
+	.navbar-link {
+		display: block;
+		padding: 0.15rem;
+		text-align: center;
+		width: 100%;
+		border-radius: var(--light-radius);
+	}
+
+	.navbar-link:hover {
+		color: var(--white-color-00);
+		background-color: var(--alt-color);
+		opacity: 0.85;
+	}
+
+	/***************** TOGGLE MENU *******************/
+	#toggle-menu {
+		display: flex;
+	}
+	/************** End of NAVBAR ***************/
+
 	/***************** SERVICES *******************/
 	.services-items {
 		grid-template-columns: repeat(2, 1fr);

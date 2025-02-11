@@ -107,3 +107,26 @@ if (testimonialsList) {
 		clearInterval(testimonialsSlideInterval);
 	});
 }
+
+/**
+ * Toggle Navbar Menu
+ */
+
+const toggleMenuBtn = document.querySelector(
+	'#toggle-menu'
+) as HTMLButtonElement;
+const navbarMenu = document.querySelector('.navbar-menu') as HTMLUListElement;
+
+const showMenuIcon = document.querySelector(
+	'#toggle-menu .ri-menu-line'
+) as HTMLElement;
+const closeMenuIcon = document.querySelector(
+	'#toggle-menu .ri-close-large-line'
+) as HTMLElement;
+
+toggleMenuBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('show');
+
+	showMenuIcon.classList.toggle('hidden');
+	closeMenuIcon.classList.toggle('hidden');
+});
