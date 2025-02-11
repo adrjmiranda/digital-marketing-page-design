@@ -231,6 +231,10 @@ select {
 
 /***************** HOME *******************/
 /***************** NAVBAR *******************/
+#navbar {
+	background-color: var(--white-color-00);
+}
+
 .navbar-content,
 .navbar-menu {
 	display: flex;
@@ -642,7 +646,7 @@ select {
 
 .contact-form,
 .contact-item:not(:last-child) {
-	padding: 0.85rem 0.45rem;
+	padding: 0.65rem 0.45rem;
 }
 
 .contact-form {
@@ -710,7 +714,61 @@ select {
 /************** End of CONTACT ***************/
 
 /***************** FOOTER *******************/
-/* TODO: Create FOOTER style */
+#footer {
+	background-color: var(--white-color-00);
+	border-top: 1px solid var(--alt-color);
+}
+
+.footer-columns {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 2.75rem;
+}
+
+.footer-description {
+	font-weight: var(--light-font);
+	font-size: var(--sm-fs);
+	text-align: justify;
+}
+
+.footer-description,
+.footer-menu,
+.footer-form {
+	margin-top: 0.95rem;
+}
+
+.footer-title {
+	color: var(--alt-color);
+	font-weight: var(--semibold-font);
+	text-transform: uppercase;
+}
+
+.footer-column:nth-child(2) .footer-title,
+.footer-menu {
+	position: relative;
+	left: 85%;
+	transform: translateX(-50%);
+}
+
+.footer-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+}
+
+.footer-link {
+	font-size: var(--sm-fs);
+}
+
+.footer-link:hover {
+	color: var(--alt-color);
+}
+
+.footer-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.95rem;
+}
 /************** End of FOOTER ***************/
 
 /***************** CREDIT AREA *******************/
