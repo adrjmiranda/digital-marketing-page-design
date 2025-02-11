@@ -26,11 +26,11 @@
 	/* Font Size */
 	--xs-fs: 0.675rem;
 	--sm-fs: 0.875rem;
-	--base-fs: 1rem;
-	--lg-fs: 1.25rem;
-	--xl-fs: 1.525rem;
-	--xxl-fs: 2.245rem;
-	--xxxl-fs: 3.175rem;
+	--base-fs: 0.98rem;
+	--lg-fs: 1.15rem;
+	--xl-fs: 1.725rem;
+	--xxl-fs: 2.145rem;
+	--xxxl-fs: 2.875rem;
 
 	/* Transitions */
 	--button-tr: background-color 0.365s ease-in-out;
@@ -313,6 +313,7 @@ select {
 	align-items: center;
 	gap: 0.955rem;
 	text-align: center;
+	width: 100%;
 }
 
 .banner-title {
@@ -320,6 +321,7 @@ select {
 	text-shadow: var(--light-white-ts);
 	font-size: var(--xxxl-fs);
 	text-transform: capitalize;
+	max-width: 75%;
 }
 
 .banner-subtitle {
@@ -805,20 +807,210 @@ select {
 
 /***************** Responsiveness *******************/
 @media screen and (max-width: 1240px) {
+	/***************** OUR TEAM *******************/
+	.our-team-items {
+		grid-template-columns: repeat(4, 1fr);
+		row-gap: 1.75rem;
+	}
+	/************** End of OUR TEAM ***************/
 }
 
 @media screen and (max-width: 1024px) {
+	/***************** BANNER *******************/
+	.banner-title {
+		font-size: var(--xxl-fs);
+		max-width: 90%;
+	}
+
+	.banner-subtitle {
+		max-width: 80%;
+		font-size: var(--lg-fs);
+		line-height: 1.5;
+	}
+	/************** End of BANNER ***************/
+
+	/***************** ABOUT *******************/
+	.about-title {
+		font-size: var(--xl-fs) !important;
+	}
+	/************** End of ABOUT ***************/
+
+	/***************** SERVICES *******************/
+	.services-items {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/************** End of SERVICES ***************/
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
+	/***************** OUR TEAM *******************/
+	.our-team-items {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/************** End of OUR TEAM ***************/
+
+	/***************** PLANS *******************/
+	.plans-items {
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 1.85rem;
+	}
+	/************** End of PLANS ***************/
+}
+
+@media screen and (max-width: 860px) {
+	/***************** Reusable *******************/
+	.section-title {
+		font-size: var(--xl-fs);
+	}
+
+	.section-subtitle {
+		font-size: var(--lg-fs);
+	}
+
+	/***************** NAVBAR *******************/
+	.navbar-link {
+		font-size: var(--sm-fs);
+	}
+	/************** End of NAVBAR ***************/
+
+	/***************** ABOUT *******************/
+	.about-title {
+		font-size: var(--lg-fs) !important;
+	}
+
+	.about-content {
+		grid-template-columns: 100%;
+		row-gap: 2.75rem;
+	}
+	/************** End of ABOUT ***************/
+
+	/***************** PLANS *******************/
+	.plans-items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/************** End of PLANS ***************/
+}
+
+@media screen and (max-width: 760px) {
+	/***************** CONTACT *******************/
+	.contact-content {
+		grid-template-columns: 100%;
+		row-gap: 1.75rem;
+	}
+	/************** End of CONTACT ***************/
+}
+
+@media screen and (max-width: 740px) {
+	/***************** SERVICES *******************/
+	.services-items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/************** End of SERVICES ***************/
+
+	/***************** OUR TEAM *******************/
+	.our-team-items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/************** End of OUR TEAM ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonials-description {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	/************** End of TESTIMONIALS ***************/
+
+	/***************** FOOTER *******************/
+	.footer-columns {
+		column-gap: 0.95rem;
+	}
+	/************** End of FOOTER ***************/
 }
 
 @media screen and (max-width: 640px) {
+	/***************** PLANS *******************/
+	.plans-items {
+		grid-template-columns: 100%;
+	}
+	/************** End of PLANS ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonials-items {
+		gap: 5%;
+	}
+
+	.testimonials-item {
+		min-width: 90%;
+	}
+
+	.testimonials-item.highlighted {
+		transform: scale(1.05);
+	}
+	/************** End of TESTIMONIALS ***************/
+
+	/***************** FOOTER *******************/
+	.footer-columns {
+		column-gap: 0.95rem;
+		grid-template-columns: 100%;
+		row-gap: 2rem;
+	}
+
+	.footer-column:nth-child(2) .footer-title,
+	.footer-menu {
+		left: 0;
+		transform: unset;
+	}
+	/************** End of FOOTER ***************/
 }
 
 @media screen and (max-width: 576px) {
+	/***************** Reusable *******************/
+	.section-title {
+		font-size: var(--lg-fs);
+	}
+
+	.section-subtitle {
+		font-size: var(--base-fs);
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+	/***************** SERVICES *******************/
+	.services-items {
+		grid-template-columns: 100%;
+	}
+
+	.services-name {
+		font-size: var(--lg-fs);
+	}
+
+	.services-description {
+		font-size: var(--base-fs);
+	}
+	/************** End of SERVICES ***************/
+
+	/***************** OUR TEAM *******************/
+	.our-team-items {
+		grid-template-columns: 100%;
+	}
+
+	.our-team-name {
+		margin-top: 2.75rem;
+		font-size: var(--lg-fs);
+	}
+
+	.our-team-name,
+	.our-team-position,
+	.our-team-description {
+		padding-left: 1.5rem;
+	}
+	/************** End of OUR TEAM ***************/
 }
 
 @media screen and (max-width: 370px) {
 }
-/************** End of Responsiveness ***************/
