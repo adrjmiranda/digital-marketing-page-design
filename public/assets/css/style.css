@@ -121,6 +121,32 @@ button {
 	outline: none;
 }
 
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+input,
+textarea,
+select {
+	font-weight: var(--light-font);
+	font-size: var(--sm-fs);
+	color: var(--black-color-00);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: var(--light-radius);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: var(--alt-color);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder,
+select:focus::placeholder {
+	color: var(--black-color-00);
+	font-weight: var(--normal-font);
+}
+
 input,
 textarea,
 select {
@@ -608,7 +634,79 @@ select {
 /************** End of TESTIMONIALS ***************/
 
 /***************** CONTACT *******************/
-/* TODO: Create CONTACT style */
+.contact-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 1.75rem;
+}
+
+.contact-form,
+.contact-item:not(:last-child) {
+	padding: 0.85rem 0.45rem;
+}
+
+.contact-form {
+	box-shadow: var(--purple-bs);
+	background-color: var(--white-color-00);
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.95rem;
+}
+
+.contact-address {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+}
+
+.contact-item {
+	font-size: var(--base-fs);
+}
+
+.contact-item i {
+	color: var(--white-color-10);
+	background-color: var(--alt-color);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.42rem;
+	border-radius: var(--circle-radius);
+	width: fit-content;
+	height: fit-content;
+	pointer-events: none;
+	font-size: var(--lg-fs);
+}
+
+.contact-item:not(:last-child) {
+	background-color: var(--white-color-00);
+	border-radius: var(--light-radius);
+	box-shadow: var(--purple-bs);
+}
+
+.contact-item:last-child {
+	margin-top: 1.35rem;
+	display: flex;
+	gap: 1.44rem;
+}
+
+.contact-item:last-child i {
+	background-color: var(--black-color-00);
+	transition: background 0.26s ease-in-out;
+	border-radius: var(--light-radius);
+}
+
+.contact-item:last-child a:hover i {
+	background-color: var(--alt-color);
+}
+
+.contact-item span {
+	margin-left: 0.95rem;
+	font-weight: var(--medium-font);
+	font-size: var(--sm-fs);
+}
 /************** End of CONTACT ***************/
 
 /***************** FOOTER *******************/
