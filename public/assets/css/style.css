@@ -24,6 +24,7 @@
 	--bold-font: 700;
 
 	/* Font Size */
+	--xs-fs: 0.675rem;
 	--sm-fs: 0.875rem;
 	--base-fs: 1rem;
 	--lg-fs: 1.25rem;
@@ -772,5 +773,22 @@ select {
 /************** End of FOOTER ***************/
 
 /***************** CREDIT AREA *******************/
-/* TODO: Create CREDIT AREA style */
+#credit-area {
+	background-color: var(--black-color-00);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-block: 0.41rem;
+}
+
+.credit {
+	text-align: center;
+	color: var(--white-color-00);
+	font-weight: var(--light-font);
+	font-size: var(--xs-fs);
+}
+
+.credit :is(a, span) {
+	color: var(--secondary-color);
+}
 /************** End of CREDIT AREA ***************/
