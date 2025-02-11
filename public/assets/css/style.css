@@ -251,6 +251,37 @@ select {
 	height: 80px;
 }
 
+/***************** MOBILE MENU *******************/
+#mobile-bar {
+	position: fixed;
+	bottom: 4rem;
+	right: 4rem;
+	z-index: 100;
+	display: none;
+}
+
+.mobile-menu {
+	background-color: var(--secondary-color);
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 1.05rem 1.85rem;
+	border-radius: var(--light-radius);
+	border-bottom-right-radius: var(--circle-radius);
+}
+
+#mobile-menu-button {
+	background-color: var(--white-color-00);
+	padding: 0.85rem;
+	border-radius: var(--circle-radius);
+	font-size: var(--xl-fs);
+	color: var(--alt-color);
+	position: absolute;
+	right: -3rem;
+	bottom: -3rem;
+	filter: var(--black-icon-ds);
+}
+
 /***************** TOGGLE MENU *******************/
 #toggle-menu {
 	display: none;
@@ -921,7 +952,7 @@ select {
 	/***************** NAVBAR *******************/
 	.navbar-content {
 		position: relative;
-		z-index: 90;
+		z-index: 100;
 	}
 
 	.navbar-menu {
@@ -932,7 +963,7 @@ select {
 		right: -50%;
 		padding-block: 1.75rem;
 		transform: translate(-50%, -50%);
-		z-index: 999;
+		z-index: 100;
 		width: 100vw;
 		gap: 0.35rem;
 		height: max-content;
@@ -1041,6 +1072,32 @@ select {
 	.btn {
 		width: 100%;
 	}
+
+	/***************** NAVBAR *******************/
+	#navbar {
+		display: none;
+	}
+
+	/***************** MOBILE MENU *******************/
+	#mobile-bar {
+		display: block;
+	}
+
+	.mobile-menu {
+		display: none;
+	}
+
+	.mobile-menu.show {
+		display: flex;
+	}
+
+	/************** End of NAVBAR ***************/
+
+	/***************** BANNER *******************/
+	#banner {
+		height: 100vh;
+	}
+	/************** End of BANNER ***************/
 
 	/***************** SERVICES *******************/
 	.services-items {

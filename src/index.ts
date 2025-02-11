@@ -124,9 +124,35 @@ const closeMenuIcon = document.querySelector(
 	'#toggle-menu .ri-close-large-line'
 ) as HTMLElement;
 
-toggleMenuBtn.addEventListener('click', () => {
-	navbarMenu.classList.toggle('show');
+if (toggleMenuBtn && navbarMenu && showMenuIcon && closeMenuIcon) {
+	toggleMenuBtn.addEventListener('click', () => {
+		navbarMenu.classList.toggle('show');
 
-	showMenuIcon.classList.toggle('hidden');
-	closeMenuIcon.classList.toggle('hidden');
-});
+		showMenuIcon.classList.toggle('hidden');
+		closeMenuIcon.classList.toggle('hidden');
+	});
+}
+
+/**
+ * Toggle MobiLe Menu
+ */
+const mobileMenu = document.querySelector('.mobile-menu') as HTMLUListElement;
+const mobileMenuButton = document.querySelector(
+	'#mobile-menu-button'
+) as HTMLButtonElement;
+
+const showMobileMenuIcon = document.querySelector(
+	'#mobile-menu-button .ri-more-2-fill'
+) as HTMLElement;
+const closeMobileMenuIcon = document.querySelector(
+	'#mobile-menu-button .ri-close-large-line'
+) as HTMLElement;
+
+if (mobileMenu && mobileMenuButton) {
+	mobileMenuButton.addEventListener('click', () => {
+		mobileMenu.classList.toggle('show');
+
+		showMobileMenuIcon.classList.toggle('hidden');
+		closeMobileMenuIcon.classList.toggle('hidden');
+	});
+}
