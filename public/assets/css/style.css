@@ -424,7 +424,62 @@ select {
 /************** End of SERVICES ***************/
 
 /***************** OUR TEAM *******************/
-/* TODO: Create OUR TEAM style */
+.our-team-items {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 0.85rem;
+}
+
+.our-team-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	background-color: var(--black-color-00);
+	color: var(--white-color-10);
+	border-radius: var(--light-radius);
+	overflow: hidden;
+	filter: var(--purple-ds);
+	transition: 0.55 ease-in-out;
+	cursor: pointer;
+}
+
+.our-team-item:hover {
+	transform: scale(1.025);
+}
+
+.our-team-image {
+	height: 75%;
+	object-fit: cover;
+	object-position: top center;
+	filter: grayscale(0.45);
+	transition: 0.55s;
+}
+
+.our-team-item:hover .our-team-image {
+	filter: grayscale(0);
+}
+
+.our-team-name,
+.our-team-position,
+.our-team-description {
+	padding-inline: 0.55rem;
+}
+
+.our-team-name {
+	color: var(--secondary-color);
+	font-size: var(--base-fs);
+	font-weight: var(--bold-font);
+}
+
+.our-team-position {
+	font-size: var(--sm-fs);
+	font-weight: var(--semibold-font);
+}
+
+.our-team-description {
+	font-weight: var(--normal-font);
+	font-size: var(--sm-fs);
+}
 /************** End of OUR TEAM ***************/
 
 /***************** PLANS *******************/
