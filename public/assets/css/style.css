@@ -380,7 +380,7 @@ select {
 	row-gap: 1.25rem;
 }
 
-.service-item {
+.services-item {
 	padding: 1.15rem 0.85rem 1.65rem;
 	border-radius: var(--light-radius);
 	background-color: var(--secondary-color);
@@ -393,11 +393,11 @@ select {
 	cursor: pointer;
 }
 
-.service-item:hover {
+.services-item:hover {
 	transform: scale(1.015);
 }
 
-.service-icon {
+.services-icon {
 	color: var(--white-color-10);
 	font-size: var(--xxxl-fs);
 	border-radius: var(--circle-radius);
@@ -405,18 +405,18 @@ select {
 	margin: 0 auto;
 }
 
-.service-icon i {
+.services-icon i {
 	filter: var(--black-icon-ds);
 }
 
-.service-name {
+.services-name {
 	color: var(--primary-color);
 	text-align: center;
 	max-width: 90%;
 	margin: 0 auto;
 }
 
-.service-description {
+.services-description {
 	text-align: center;
 	line-height: 1.6;
 	font-weight: var(--light-font);
