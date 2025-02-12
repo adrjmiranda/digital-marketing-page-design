@@ -29,7 +29,7 @@
 		"webpack-cli": "^6.0.1"
 	},
 	"dependencies": {
-		"@types/slick-carousel": "^1.6.40",
+		"@types/scrollreveal": "^0.0.11",
 		"scrollreveal": "^4.0.9"
 	}
 }

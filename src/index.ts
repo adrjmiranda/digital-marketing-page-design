@@ -156,3 +156,77 @@ if (mobileMenu && mobileMenuButton) {
 		closeMobileMenuIcon.classList.toggle('hidden');
 	});
 }
+
+/**
+ * Create Animations with ScrollReveal
+ */
+
+import ScrollReveal from 'scrollreveal';
+
+const createScrollReveal = (
+	select: string,
+	options: scrollReveal.ScrollRevealObjectOptions
+) => {
+	ScrollReveal().reveal(select, {
+		reset: true,
+		easing: 'ease-in-out',
+		duration: 1720,
+		delay: 100,
+		opacity: 0,
+		...options,
+	});
+};
+
+// About Section
+createScrollReveal('.about-video iframe', {
+	duration: 1500,
+});
+
+// Services Section
+const servicesCardsNumber = (
+	document.querySelectorAll('.services-item') as NodeListOf<HTMLDivElement>
+)?.length;
+
+if (servicesCardsNumber) {
+	for (let i = 0; i < servicesCardsNumber; i++) {
+		createScrollReveal(`.services-item:nth-child(${i + 1})`, {
+			origin: 'bottom',
+			distance: '8%',
+			duration: 500,
+			delay: i * 60,
+		});
+	}
+}
+
+// Our Team Section
+const ourTeamCardsNumber = (
+	document.querySelectorAll('.our-team-item') as NodeListOf<HTMLDivElement>
+)?.length;
+
+if (ourTeamCardsNumber) {
+	for (let i = 0; i < ourTeamCardsNumber; i++) {
+		createScrollReveal(`.our-team-item:nth-child(${i + 1})`, {
+			origin: 'top',
+			distance: '5%',
+			duration: 500,
+			delay: i * 25,
+		});
+	}
+}
+
+// Our Team Section
+const plansCardsNumber = (
+	document.querySelectorAll('.plans-item') as NodeListOf<HTMLDivElement>
+)?.length;
+
+if (plansCardsNumber) {
+	for (let i = 0; i < plansCardsNumber; i++) {
+		createScrollReveal(`.plans-item:nth-child(${i + 1})`, {
+			origin: 'bottom',
+			distance: '5%',
+			duration: 500,
+			delay: i * 25,
+			reset: true,
+		});
+	}
+}
