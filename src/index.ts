@@ -141,6 +141,10 @@ const mobileMenuButton = document.querySelector(
 	'#mobile-menu-button'
 ) as HTMLButtonElement;
 
+const mobileMenuLinks = document.querySelectorAll(
+	'.mobile-menu-link'
+) as NodeListOf<HTMLAnchorElement>;
+
 const showMobileMenuIcon = document.querySelector(
 	'#mobile-menu-button .ri-more-2-fill'
 ) as HTMLElement;
@@ -148,12 +152,24 @@ const closeMobileMenuIcon = document.querySelector(
 	'#mobile-menu-button .ri-close-large-line'
 ) as HTMLElement;
 
-if (mobileMenu && mobileMenuButton) {
+if (
+	mobileMenu &&
+	mobileMenuButton &&
+	mobileMenuLinks &&
+	showMobileMenuIcon &&
+	closeMobileMenuIcon
+) {
 	mobileMenuButton.addEventListener('click', () => {
 		mobileMenu.classList.toggle('show');
 
 		showMobileMenuIcon.classList.toggle('hidden');
 		closeMobileMenuIcon.classList.toggle('hidden');
+	});
+
+	mobileMenuLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			mobileMenu.classList.toggle('show');
+		});
 	});
 }
 
