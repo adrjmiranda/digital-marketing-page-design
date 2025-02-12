@@ -120,6 +120,8 @@ button {
 	border: none;
 	background-color: transparent;
 	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: var(--light-radius);
 }
 
 input::placeholder,
@@ -131,8 +133,6 @@ select {
 	font-weight: var(--light-font);
 	font-size: var(--sm-fs);
 	color: var(--black-color-00);
-	border: 1px solid rgba(0, 0, 0, 0.25);
-	border-radius: var(--light-radius);
 }
 
 input:focus,
@@ -261,13 +261,17 @@ select {
 }
 
 .mobile-menu {
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color);
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
 	padding: 1.05rem 1.85rem;
 	border-radius: var(--light-radius);
 	border-bottom-right-radius: var(--circle-radius);
+}
+
+.mobile-menu-link {
+	color: var(--white-color-00);
 }
 
 #mobile-menu-button {

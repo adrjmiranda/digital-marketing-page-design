@@ -227,6 +227,7 @@ if (plansCardsNumber) {
 			duration: 500,
 			delay: i * 25,
 			reset: true,
+			mobile: false,
 		});
 	}
 }
